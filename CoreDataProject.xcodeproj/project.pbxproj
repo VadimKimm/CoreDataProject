@@ -14,6 +14,7 @@
 		DD0B777C28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD0B777A28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld */; };
 		DD0B777E28A907BE00CFE2B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD0B777D28A907BE00CFE2B2 /* Assets.xcassets */; };
 		DD0B778128A907BE00CFE2B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0B777F28A907BE00CFE2B2 /* LaunchScreen.storyboard */; };
+		DD2727F428A91465003779D2 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727F328A91465003779D2 /* UsersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DD0B777D28A907BE00CFE2B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD0B778028A907BE00CFE2B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD0B778228A907BE00CFE2B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD2727F328A91465003779D2 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				DD0B777528A907BD00CFE2B2 /* UsersViewController.swift */,
+				DD2727F328A91465003779D2 /* UsersView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD2727F428A91465003779D2 /* UsersView.swift in Sources */,
 				DD0B777628A907BD00CFE2B2 /* UsersViewController.swift in Sources */,
 				DD0B777228A907BD00CFE2B2 /* AppDelegate.swift in Sources */,
 				DD0B777C28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld in Sources */,
