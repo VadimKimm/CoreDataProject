@@ -15,6 +15,8 @@
 		DD0B777E28A907BE00CFE2B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD0B777D28A907BE00CFE2B2 /* Assets.xcassets */; };
 		DD0B778128A907BE00CFE2B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0B777F28A907BE00CFE2B2 /* LaunchScreen.storyboard */; };
 		DD2727F428A91465003779D2 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727F328A91465003779D2 /* UsersView.swift */; };
+		DD2727F928A928A4003779D2 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727F728A928A4003779D2 /* User+CoreDataClass.swift */; };
+		DD2727FA28A928A4003779D2 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727F828A928A4003779D2 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		DD0B778028A907BE00CFE2B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD0B778228A907BE00CFE2B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD2727F328A91465003779D2 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		DD2727F728A928A4003779D2 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DD2727F828A928A4003779D2 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +88,6 @@
 			children = (
 				DD2727ED28A9129C003779D2 /* Resources */,
 				DD2727EE28A912A9003779D2 /* Sources */,
-				DD0B777A28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld */,
 			);
 			path = CoreDataProject;
 			sourceTree = "<group>";
@@ -92,6 +95,7 @@
 		DD2727ED28A9129C003779D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DD0B777A28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld */,
 				DD0B777D28A907BE00CFE2B2 /* Assets.xcassets */,
 				DD0B777F28A907BE00CFE2B2 /* LaunchScreen.storyboard */,
 				DD0B778228A907BE00CFE2B2 /* Info.plist */,
@@ -128,6 +132,7 @@
 		DD2727F128A912DD003779D2 /* UsersModule */ = {
 			isa = PBXGroup;
 			children = (
+				DD2727F628A9284A003779D2 /* Model */,
 				DD2727F228A91317003779D2 /* View */,
 			);
 			path = UsersModule;
@@ -140,6 +145,15 @@
 				DD2727F328A91465003779D2 /* UsersView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DD2727F628A9284A003779D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD2727F728A928A4003779D2 /* User+CoreDataClass.swift */,
+				DD2727F828A928A4003779D2 /* User+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +272,8 @@
 			files = (
 				DD2727F428A91465003779D2 /* UsersView.swift in Sources */,
 				DD0B777628A907BD00CFE2B2 /* UsersViewController.swift in Sources */,
+				DD2727F928A928A4003779D2 /* User+CoreDataClass.swift in Sources */,
+				DD2727FA28A928A4003779D2 /* User+CoreDataProperties.swift in Sources */,
 				DD0B777228A907BD00CFE2B2 /* AppDelegate.swift in Sources */,
 				DD0B777C28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld in Sources */,
 				DD0B777428A907BD00CFE2B2 /* SceneDelegate.swift in Sources */,
