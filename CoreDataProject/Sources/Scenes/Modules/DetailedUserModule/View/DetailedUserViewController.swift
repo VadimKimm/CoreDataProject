@@ -97,9 +97,6 @@ class DetailedUserViewController: UIViewController {
     }
 
     @objc private func doneButtonPressed() {
-//        if detailedUserView?.genderTextField.text?.isEmpty ?? true {
-//            detailedUserView?.genderTextField.text = genders.first
-//        }
         self.view.endEditing(true)
     }
 

@@ -9,16 +9,22 @@ import Foundation
 
 class UsersPresenter: UsersPresenterProtocol {
 
+    // MARK: - Properties
+
     weak var view: UsersViewProtocol?
     private let coreDataService: CoreDataProtocol
     private let router: UsersRouterProtocol?
     var users: [User]?
+
+    // MARK: - Initialize
     
     required init(view: UsersViewProtocol, coreDataService: CoreDataProtocol, router: UsersRouterProtocol) {
         self.view = view
         self.coreDataService = coreDataService
         self.router = router
     }
+
+    // MARK: - Functions
 
     func getAllUsers() {
         users = coreDataService.getAllUsers()

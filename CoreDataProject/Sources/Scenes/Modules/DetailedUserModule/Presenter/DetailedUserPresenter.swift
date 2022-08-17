@@ -9,10 +9,14 @@ import Foundation
 
 class DetailedUserPresenter: DetailedUserPresenterProtocol {
 
+    // MARK: - Properties
+
     weak var view: DetailedUserViewProtocol?
     private let coreDataService: CoreDataProtocol
     private let router: UsersRouterProtocol?
     var userToEdit: User?
+
+    // MARK: - Initialize
 
     required init(view: DetailedUserViewProtocol, coreDataService: CoreDataProtocol, router: UsersRouterProtocol, user: User?) {
         self.view = view
@@ -20,6 +24,8 @@ class DetailedUserPresenter: DetailedUserPresenterProtocol {
         self.router = router
         self.userToEdit = user
     }
+
+    // MARK: - Functions
 
     func getUser() {
         view?.setValuesForTextFields()
