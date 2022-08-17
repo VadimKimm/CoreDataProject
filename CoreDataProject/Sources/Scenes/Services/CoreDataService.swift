@@ -71,7 +71,7 @@ class CoreDataService: CoreDataProtocol {
         }
     }
 
-    func updateUser(_ user: User, newName: String?, birthDate: String?, gender: String?) {
+    func updateUser(_ user: User, newName: String?, birthDate: String?, gender: String?, avatar: Data?) {
         if let newName = newName {
             user.name = newName
         }
@@ -82,6 +82,10 @@ class CoreDataService: CoreDataProtocol {
 
         if let gender = gender {
             user.gender = gender
+        }
+
+        if let avatar = avatar {
+            user.avatar = avatar
         }
 
         do {
