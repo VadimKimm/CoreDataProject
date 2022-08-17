@@ -20,6 +20,7 @@
 		DD27280028A92A5F003779D2 /* UsersProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727FF28A92A5F003779D2 /* UsersProtocols.swift */; };
 		DD27280628A9456C003779D2 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27280528A9456C003779D2 /* CoreDataService.swift */; };
 		DD27280F28AA921B003779D2 /* DetailedUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27280E28AA921B003779D2 /* DetailedUserProtocol.swift */; };
+		DD27281528AA9318003779D2 /* DetailedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281428AA9318003779D2 /* DetailedUserView.swift */; };
 		DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		DD2727FF28A92A5F003779D2 /* UsersProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersProtocols.swift; sourceTree = "<group>"; };
 		DD27280528A9456C003779D2 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		DD27280E28AA921B003779D2 /* DetailedUserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserProtocol.swift; sourceTree = "<group>"; };
+		DD27281428AA9318003779D2 /* DetailedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserView.swift; sourceTree = "<group>"; };
 		DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,8 +198,17 @@
 			isa = PBXGroup;
 			children = (
 				DD27280D28AA9204003779D2 /* Protocols */,
+				DD27280C28AA91E7003779D2 /* View */,
 			);
 			path = DetailedUserModule;
+			sourceTree = "<group>";
+		};
+		DD27280C28AA91E7003779D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD27281428AA9318003779D2 /* DetailedUserView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DD27280D28AA9204003779D2 /* Protocols */ = {
@@ -341,6 +352,7 @@
 				DD0B777428A907BD00CFE2B2 /* SceneDelegate.swift in Sources */,
 				DD27280028A92A5F003779D2 /* UsersProtocols.swift in Sources */,
 				DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */,
+				DD27281528AA9318003779D2 /* DetailedUserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
