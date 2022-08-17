@@ -16,6 +16,7 @@
 		DD0B778128A907BE00CFE2B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0B777F28A907BE00CFE2B2 /* LaunchScreen.storyboard */; };
 		DD2727F428A91465003779D2 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727F328A91465003779D2 /* UsersView.swift */; };
 		DD2727F928A928A4003779D2 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727F728A928A4003779D2 /* User+CoreDataClass.swift */; };
+		DD27280028A92A5F003779D2 /* UsersProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727FF28A92A5F003779D2 /* UsersProtocols.swift */; };
 		DD27280628A9456C003779D2 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27280528A9456C003779D2 /* CoreDataService.swift */; };
 		DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		DD0B778228A907BE00CFE2B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD2727F328A91465003779D2 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		DD2727F728A928A4003779D2 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DD2727FF28A92A5F003779D2 /* UsersProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersProtocols.swift; sourceTree = "<group>"; };
 		DD27280528A9456C003779D2 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 		DD2727F128A912DD003779D2 /* UsersModule */ = {
 			isa = PBXGroup;
 			children = (
+				DD2727FE28A92A4C003779D2 /* Protocols */,
 				DD2727F628A9284A003779D2 /* Model */,
 				DD2727F228A91317003779D2 /* View */,
 			);
@@ -157,6 +160,14 @@
 				DD2727F728A928A4003779D2 /* User+CoreDataClass.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DD2727FE28A92A4C003779D2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DD2727FF28A92A5F003779D2 /* UsersProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		DD27280428A94556003779D2 /* Services */ = {
@@ -296,6 +307,7 @@
 				DD0B777C28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld in Sources */,
 				DD27280628A9456C003779D2 /* CoreDataService.swift in Sources */,
 				DD0B777428A907BD00CFE2B2 /* SceneDelegate.swift in Sources */,
+				DD27280028A92A5F003779D2 /* UsersProtocols.swift in Sources */,
 				DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
