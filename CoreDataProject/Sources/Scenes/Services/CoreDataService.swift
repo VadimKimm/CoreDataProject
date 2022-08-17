@@ -13,7 +13,7 @@ protocol CoreDataProtocol: AnyObject {
     func saveUser(_ name: String)
     func getAllUsers() -> [User]?
     func deleteUser(_ user: User)
-    func updateUser(_ user: User, newName: String?, birthDate: String?, gender: String?)
+    func updateUser(_ user: User, newName: String?, birthDate: String?, gender: String?, avatar: Data?)
 }
 
 // MARK: - CoreDataService
