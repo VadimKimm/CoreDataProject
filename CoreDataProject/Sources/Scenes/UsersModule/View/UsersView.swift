@@ -65,9 +65,10 @@ class UsersView: UIView {
     // MARK: - Settings
     
        private func setupHierarchy() {
-           addSubview(addUserTextField)
-           addSubview(addUserButton)
-           addSubview(tableView)
+           let subviews = [addUserTextField,
+                           addUserButton,
+                           tableView]
+           subviews.forEach { addSubview($0) }
        }
 
        private func setupLayout() {
@@ -79,16 +80,13 @@ class UsersView: UIView {
            }
 
            addUserButton.snp.makeConstraints { make in
-               make.top.equalTo(addUserTextField.snp.bottom).offset(20)
-               make.left.equalTo(addUserTextField.snp.left)
-               make.right.equalTo(addUserTextField.snp.right)
+               make.top.equalTo(addUserTextField.snp.bottom).offset(Metrics.addUserButtonTopOffset)
+               make.left.right.equalTo(addUserTextField)
            }
 
            tableView.snp.makeConstraints { make in
                make.top.equalTo(addUserButton.snp.bottom).offset(Metrics.tableViewTopOffset)
-               make.left.equalTo(self.snp.left)
-               make.right.equalTo(self.snp.right)
-               make.bottom.equalTo(self.snp.bottom)
+               make.left.right.bottom.equalTo(self)
            }
        }
 
@@ -105,6 +103,8 @@ extension UsersView {
         static let addUserTextFieldRightOffset = -addUserTextFieldLeftOffset
         static let addUserTextFieldHeight = 45
         static let addUserButtonHeight = addUserTextFieldHeight
+
+        static let addUserButtonTopOffset = 20
 
         static let tableViewTopOffset = 20
 
