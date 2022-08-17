@@ -273,7 +273,6 @@
 				DD2727F428A91465003779D2 /* UsersView.swift in Sources */,
 				DD0B777628A907BD00CFE2B2 /* UsersViewController.swift in Sources */,
 				DD2727F928A928A4003779D2 /* User+CoreDataClass.swift in Sources */,
-				DD2727FA28A928A4003779D2 /* User+CoreDataProperties.swift in Sources */,
 				DD0B777228A907BD00CFE2B2 /* AppDelegate.swift in Sources */,
 				DD0B777C28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld in Sources */,
 				DD0B777428A907BD00CFE2B2 /* SceneDelegate.swift in Sources */,
