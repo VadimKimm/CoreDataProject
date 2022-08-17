@@ -18,6 +18,7 @@
 		DD2727F928A928A4003779D2 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727F728A928A4003779D2 /* User+CoreDataClass.swift */; };
 		DD2727FD28A92992003779D2 /* UsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727FC28A92992003779D2 /* UsersPresenter.swift */; };
 		DD27280028A92A5F003779D2 /* UsersProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727FF28A92A5F003779D2 /* UsersProtocols.swift */; };
+		DD27280328A942F7003779D2 /* AssemblyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27280228A942F7003779D2 /* AssemblyModule.swift */; };
 		DD27280628A9456C003779D2 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27280528A9456C003779D2 /* CoreDataService.swift */; };
 		DD27280F28AA921B003779D2 /* DetailedUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27280E28AA921B003779D2 /* DetailedUserProtocol.swift */; };
 		DD27281128AA9290003779D2 /* DetailedUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281028AA9290003779D2 /* DetailedUserPresenter.swift */; };
@@ -45,6 +46,7 @@
 		DD2727F728A928A4003779D2 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DD2727FC28A92992003779D2 /* UsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPresenter.swift; sourceTree = "<group>"; };
 		DD2727FF28A92A5F003779D2 /* UsersProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersProtocols.swift; sourceTree = "<group>"; };
+		DD27280228A942F7003779D2 /* AssemblyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModule.swift; sourceTree = "<group>"; };
 		DD27280528A9456C003779D2 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		DD27280E28AA921B003779D2 /* DetailedUserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserProtocol.swift; sourceTree = "<group>"; };
 		DD27281028AA9290003779D2 /* DetailedUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserPresenter.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				DD27281B28ACCB40003779D2 /* Router */,
+				DD27280128A942DC003779D2 /* Assembly */,
 				DD27280428A94556003779D2 /* Services */,
 				DD2727F128A912DD003779D2 /* UsersModule */,
 				DD27280A28AA91C5003779D2 /* DetailedUserModule */,
@@ -195,6 +198,14 @@
 				DD2727FF28A92A5F003779D2 /* UsersProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DD27280128A942DC003779D2 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				DD27280228A942F7003779D2 /* AssemblyModule.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		DD27280428A94556003779D2 /* Services */ = {
@@ -375,6 +386,7 @@
 				DD27281A28ACC246003779D2 /* String + Ext.swift in Sources */,
 				DD2727F428A91465003779D2 /* UsersView.swift in Sources */,
 				DD2727FD28A92992003779D2 /* UsersPresenter.swift in Sources */,
+				DD27280328A942F7003779D2 /* AssemblyModule.swift in Sources */,
 				DD27280F28AA921B003779D2 /* DetailedUserProtocol.swift in Sources */,
 				DD27281828ACC198003779D2 /* Date + Ext.swift in Sources */,
 				DD0B777628A907BD00CFE2B2 /* UsersViewController.swift in Sources */,
