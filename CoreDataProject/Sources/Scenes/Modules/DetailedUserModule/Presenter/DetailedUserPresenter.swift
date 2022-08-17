@@ -31,8 +31,8 @@ class DetailedUserPresenter: DetailedUserPresenterProtocol {
         view?.setValuesForTextFields()
     }
 
-    func updateUser(_ user: User, newName: String?, birthDate: String?, gender: String?) {
-        coreDataService.updateUser(user, newName: newName, birthDate: birthDate, gender: gender)
+    func updateUser(_ user: User, newName: String?, birthDate: String?, gender: String?, avatar: Data?) {
+        coreDataService.updateUser(user, newName: newName, birthDate: birthDate, gender: gender, avatar: avatar)
     }
 
     func backButtonTapped() {
