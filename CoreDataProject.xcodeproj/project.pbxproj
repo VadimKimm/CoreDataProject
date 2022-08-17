@@ -28,6 +28,7 @@
 		DD27281A28ACC246003779D2 /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281928ACC246003779D2 /* String + Ext.swift */; };
 		DD27281D28ACCB4F003779D2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281C28ACCB4F003779D2 /* Router.swift */; };
 		DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */; };
+		DD27282228AD685F003779D2 /* UIImage + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27282128AD685F003779D2 /* UIImage + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		DD27281928ACC246003779D2 /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
 		DD27281C28ACCB4F003779D2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
+		DD27282128AD685F003779D2 /* UIImage + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 				DD27281728ACC198003779D2 /* Date + Ext.swift */,
 				DD27281928ACC246003779D2 /* String + Ext.swift */,
 				DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */,
+				DD27282128AD685F003779D2 /* UIImage + Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				DD0B777C28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld in Sources */,
 				DD27280628A9456C003779D2 /* CoreDataService.swift in Sources */,
 				DD27281328AA930D003779D2 /* DetailedUserViewController.swift in Sources */,
+				DD27282228AD685F003779D2 /* UIImage + Ext.swift in Sources */,
 				DD0B777428A907BD00CFE2B2 /* SceneDelegate.swift in Sources */,
 				DD27280028A92A5F003779D2 /* UsersProtocols.swift in Sources */,
 				DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */,
