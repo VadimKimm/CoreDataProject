@@ -20,6 +20,6 @@ protocol DetailedUserPresenterProtocol: AnyObject {
 
     init(view: DetailedUserViewProtocol, coreDataService: CoreDataProtocol, router: UsersRouterProtocol, user: User?)
     func getUser()
-    func updateUser(_ user: User, newName: String?, birthDate: String?, gender: String?)
+    func updateUser(_ user: User, newName: String?, birthDate: String?, gender: String?, avatar: Data?)
     func backButtonTapped()
 }
