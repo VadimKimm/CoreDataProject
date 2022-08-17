@@ -27,11 +27,12 @@ class UsersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        presenter?.getAllUsers()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        presenter?.getAllUsers()
+        fetchTableView()
     }
 
     // MARK: - Private functions
