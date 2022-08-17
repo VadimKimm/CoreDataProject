@@ -21,6 +21,7 @@
 		DD27280628A9456C003779D2 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27280528A9456C003779D2 /* CoreDataService.swift */; };
 		DD27280F28AA921B003779D2 /* DetailedUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27280E28AA921B003779D2 /* DetailedUserProtocol.swift */; };
 		DD27281128AA9290003779D2 /* DetailedUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281028AA9290003779D2 /* DetailedUserPresenter.swift */; };
+		DD27281328AA930D003779D2 /* DetailedUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281228AA930D003779D2 /* DetailedUserViewController.swift */; };
 		DD27281528AA9318003779D2 /* DetailedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281428AA9318003779D2 /* DetailedUserView.swift */; };
 		DD27281828ACC198003779D2 /* Date + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281728ACC198003779D2 /* Date + Ext.swift */; };
 		DD27281A28ACC246003779D2 /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281928ACC246003779D2 /* String + Ext.swift */; };
@@ -47,6 +48,7 @@
 		DD27280528A9456C003779D2 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		DD27280E28AA921B003779D2 /* DetailedUserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserProtocol.swift; sourceTree = "<group>"; };
 		DD27281028AA9290003779D2 /* DetailedUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserPresenter.swift; sourceTree = "<group>"; };
+		DD27281228AA930D003779D2 /* DetailedUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserViewController.swift; sourceTree = "<group>"; };
 		DD27281428AA9318003779D2 /* DetailedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserView.swift; sourceTree = "<group>"; };
 		DD27281728ACC198003779D2 /* Date + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext.swift"; sourceTree = "<group>"; };
 		DD27281928ACC246003779D2 /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		DD27280C28AA91E7003779D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DD27281228AA930D003779D2 /* DetailedUserViewController.swift */,
 				DD27281428AA9318003779D2 /* DetailedUserView.swift */,
 			);
 			path = View;
@@ -381,6 +384,7 @@
 				DD27281D28ACCB4F003779D2 /* Router.swift in Sources */,
 				DD0B777C28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld in Sources */,
 				DD27280628A9456C003779D2 /* CoreDataService.swift in Sources */,
+				DD27281328AA930D003779D2 /* DetailedUserViewController.swift in Sources */,
 				DD0B777428A907BD00CFE2B2 /* SceneDelegate.swift in Sources */,
 				DD27280028A92A5F003779D2 /* UsersProtocols.swift in Sources */,
 				DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */,
