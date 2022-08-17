@@ -7,16 +7,23 @@
 
 import UIKit
 
-class DetailedUserViewController: UIViewController {
+class DetailedUserViewController: UIViewController, UINavigationControllerDelegate {
 
     // MARK: - Properties
 
     var presenter: DetailedUserPresenterProtocol!
-    private let datePicker = UIDatePicker()
+    private var selectedAvatar: Data? = nil
     private let genders = ["Choose gender", "Male", "Female"]
     private var isEditingMode = false
     private var editOptionButton = UIBarButtonItem()
     private var backOptionButton = UIBarButtonItem()
+    private let datePicker = UIDatePicker()
+    private let imagePicker: UIImagePickerController = {
+        let picker = UIImagePickerController()
+        picker.sourceType = .savedPhotosAlbum
+        picker.allowsEditing = false
+        return picker
+    }()
 
     private var detailedUserView: DetailedUserView? {
         guard isViewLoaded else { return nil }
@@ -42,6 +49,8 @@ class DetailedUserViewController: UIViewController {
         detailedUserView?.genderTextField.delegate = self
         detailedUserView?.genderPickerView.delegate = self
         detailedUserView?.genderPickerView.dataSource = self
+        imagePicker.delegate = self
+        detailedUserView?.avatarButton.addTarget(self, action: #selector(avatarButtonTapped), for: .touchUpInside)
 
         setupNavigationBar()
         setupDatePicker()
@@ -92,6 +101,10 @@ class DetailedUserViewController: UIViewController {
         detailedUserView?.genderTextField.inputView = detailedUserView?.genderPickerView
     }
 
+    @objc private func avatarButtonTapped() {
+        present(imagePicker, animated: true, completion: nil)
+    }
+
     @objc private func doneButtonPressed() {
         self.view.endEditing(true)
     }
@@ -108,6 +121,7 @@ class DetailedUserViewController: UIViewController {
         let userNameTextField = detailedUserView?.userNameTextField
         let birthDateTextField = detailedUserView?.birthDateTextField
         let genderTextField = detailedUserView?.genderTextField
+        let avatar = detailedUserView?.avatarButton
 
         func toggleMode() {
             isEditingMode.toggle()
@@ -117,6 +131,8 @@ class DetailedUserViewController: UIViewController {
             userNameTextField?.isEnabled.toggle()
             birthDateTextField?.isEnabled.toggle()
             genderTextField?.isEnabled.toggle()
+            avatar?.isEnabled.toggle()
+
         }
 
         toggleMode()
@@ -132,7 +148,8 @@ class DetailedUserViewController: UIViewController {
             presenter.updateUser(presenter.userToEdit!,
                                  newName: userNameTextField?.text,
                                  birthDate: birthDateTextField?.text,
-                                 gender: genderTextField?.text)
+                                 gender: genderTextField?.text,
+                                 avatar: selectedAvatar)
         }
     }
 
@@ -145,6 +162,12 @@ extension DetailedUserViewController: DetailedUserViewProtocol {
         detailedUserView?.userNameTextField.text = presenter.userToEdit?.name
         detailedUserView?.birthDateTextField.text = presenter.userToEdit?.birthDate?.convertToString()
         detailedUserView?.genderTextField.text = presenter.userToEdit?.gender
+
+        DispatchQueue.main.async {
+            if let avatar = self.presenter.userToEdit?.avatar {
+                self.detailedUserView?.setAvatar(avatar)
+            }
+        }
     }
 }
 
@@ -179,5 +202,28 @@ extension DetailedUserViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         guard row != 0 else { return }
         detailedUserView?.genderTextField.text = genders[row]
+    }
+}
+
+// MARK: - UIImagePickerControllerDelegate
+
+extension DetailedUserViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+    {
+        imagePicker.dismiss(animated: true, completion: nil)
+        guard let image = info[.originalImage] as? UIImage else {
+            showAlert(title: "Error", message: "\(info)")
+            return
+        }
+
+        DispatchQueue.main.async {
+            let scaledImage = image.scaleTo(targetSize: CGSize(width: 100, height: 100))
+            self.selectedAvatar = scaledImage.pngData()
+
+            if let avatar = self.selectedAvatar {
+                self.detailedUserView?.setAvatar(avatar)
+            }
+        }
     }
 }
