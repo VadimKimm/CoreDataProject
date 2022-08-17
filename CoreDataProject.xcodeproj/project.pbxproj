@@ -23,6 +23,7 @@
 		DD27281528AA9318003779D2 /* DetailedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281428AA9318003779D2 /* DetailedUserView.swift */; };
 		DD27281828ACC198003779D2 /* Date + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281728ACC198003779D2 /* Date + Ext.swift */; };
 		DD27281A28ACC246003779D2 /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281928ACC246003779D2 /* String + Ext.swift */; };
+		DD27281D28ACCB4F003779D2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281C28ACCB4F003779D2 /* Router.swift */; };
 		DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		DD27281428AA9318003779D2 /* DetailedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserView.swift; sourceTree = "<group>"; };
 		DD27281728ACC198003779D2 /* Date + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext.swift"; sourceTree = "<group>"; };
 		DD27281928ACC246003779D2 /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
+		DD27281C28ACCB4F003779D2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 		DD2727F028A912D6003779D2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DD27281B28ACCB40003779D2 /* Router */,
 				DD27280428A94556003779D2 /* Services */,
 				DD2727F128A912DD003779D2 /* UsersModule */,
 				DD27280A28AA91C5003779D2 /* DetailedUserModule */,
@@ -231,6 +234,14 @@
 				DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DD27281B28ACCB40003779D2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DD27281C28ACCB4F003779D2 /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +366,7 @@
 				DD0B777628A907BD00CFE2B2 /* UsersViewController.swift in Sources */,
 				DD2727F928A928A4003779D2 /* User+CoreDataClass.swift in Sources */,
 				DD0B777228A907BD00CFE2B2 /* AppDelegate.swift in Sources */,
+				DD27281D28ACCB4F003779D2 /* Router.swift in Sources */,
 				DD0B777C28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld in Sources */,
 				DD27280628A9456C003779D2 /* CoreDataService.swift in Sources */,
 				DD0B777428A907BD00CFE2B2 /* SceneDelegate.swift in Sources */,
