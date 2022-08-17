@@ -21,6 +21,7 @@
 		DD27280628A9456C003779D2 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27280528A9456C003779D2 /* CoreDataService.swift */; };
 		DD27280F28AA921B003779D2 /* DetailedUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27280E28AA921B003779D2 /* DetailedUserProtocol.swift */; };
 		DD27281528AA9318003779D2 /* DetailedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281428AA9318003779D2 /* DetailedUserView.swift */; };
+		DD27281828ACC198003779D2 /* Date + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281728ACC198003779D2 /* Date + Ext.swift */; };
 		DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		DD27280528A9456C003779D2 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		DD27280E28AA921B003779D2 /* DetailedUserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserProtocol.swift; sourceTree = "<group>"; };
 		DD27281428AA9318003779D2 /* DetailedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserView.swift; sourceTree = "<group>"; };
+		DD27281728ACC198003779D2 /* Date + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext.swift"; sourceTree = "<group>"; };
 		DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +224,7 @@
 		DD27281628ACC15F003779D2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DD27281728ACC198003779D2 /* Date + Ext.swift */,
 				DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */,
 			);
 			path = Extensions;
@@ -344,6 +347,7 @@
 				DD2727F428A91465003779D2 /* UsersView.swift in Sources */,
 				DD2727FD28A92992003779D2 /* UsersPresenter.swift in Sources */,
 				DD27280F28AA921B003779D2 /* DetailedUserProtocol.swift in Sources */,
+				DD27281828ACC198003779D2 /* Date + Ext.swift in Sources */,
 				DD0B777628A907BD00CFE2B2 /* UsersViewController.swift in Sources */,
 				DD2727F928A928A4003779D2 /* User+CoreDataClass.swift in Sources */,
 				DD0B777228A907BD00CFE2B2 /* AppDelegate.swift in Sources */,
