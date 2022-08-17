@@ -10,13 +10,23 @@ import SnapKit
 
 class DetailedUserView: UIView {
 
+    // MARK: Configuration
+
+    func setAvatar(_ avatar: Data) {
+        avatarButton.setImage(UIImage(data: avatar), for: .normal)
+        avatarButton.setImage(UIImage(data: avatar), for: .disabled)
+    }
+
     // MARK: - Views
 
-    var avatarImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = .blue
-        return imageView
+    var avatarButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "defaultUserPhoto"), for: .normal)
+        button.imageView?.layer.cornerRadius = CGFloat(Metrics.avatarImageViewHeight / 2)
+        button.imageView?.clipsToBounds = true
+        button.imageView?.layer.masksToBounds = true
+        button.isEnabled = false
+        return button
     }()
 
     var userNameTextField: UITextField = {
@@ -75,7 +85,7 @@ class DetailedUserView: UIView {
     // MARK: - Settings
 
     private func setupHierarchy() {
-        let subviews = [avatarImageView,
+        let subviews = [avatarButton,
                         userNameTextField,
                         birthDateTextField,
                         genderTextField]
@@ -83,19 +93,14 @@ class DetailedUserView: UIView {
     }
 
     private func setupLayout() {
-        avatarImageView.snp.makeConstraints { make in
+        avatarButton.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(Metrics.avatarImageViewTopOffset)
             make.centerX.equalTo(self.safeAreaLayoutGuide.snp.centerX)
             make.height.width.equalTo(Metrics.avatarImageViewHeight)
-            avatarImageView.frame = CGRect(x: 0,
-                                           y: 0,
-                                           width: Metrics.avatarImageViewHeight,
-                                           height: Metrics.avatarImageViewHeight)
-            avatarImageView.makeRounded()
         }
 
         userNameTextField.snp.makeConstraints { make in
-            make.top.equalTo(avatarImageView.snp.bottom).offset(Metrics.primaryTopOffset)
+            make.top.equalTo(avatarButton.snp.bottom).offset(Metrics.primaryTopOffset)
             make.left.equalTo(self.safeAreaLayoutGuide.snp.left).offset(Metrics.primaryLeftOffset)
             make.right.equalTo(self.safeAreaLayoutGuide.snp.right).offset(Metrics.primaryRightOffset)
             make.height.equalTo(Metrics.primaryHeight)
