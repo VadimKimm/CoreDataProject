@@ -16,8 +16,8 @@
 		DD0B778128A907BE00CFE2B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0B777F28A907BE00CFE2B2 /* LaunchScreen.storyboard */; };
 		DD2727F428A91465003779D2 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727F328A91465003779D2 /* UsersView.swift */; };
 		DD2727F928A928A4003779D2 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727F728A928A4003779D2 /* User+CoreDataClass.swift */; };
-		DD2727FA28A928A4003779D2 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2727F828A928A4003779D2 /* User+CoreDataProperties.swift */; };
 		DD27280628A9456C003779D2 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27280528A9456C003779D2 /* CoreDataService.swift */; };
+		DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		DD0B778228A907BE00CFE2B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD2727F328A91465003779D2 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		DD2727F728A928A4003779D2 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DD2727F828A928A4003779D2 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DD27280528A9456C003779D2 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +128,7 @@
 			children = (
 				DD27280428A94556003779D2 /* Services */,
 				DD2727F128A912DD003779D2 /* UsersModule */,
+				DD27281628ACC15F003779D2 /* Extensions */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -164,6 +165,14 @@
 				DD27280528A9456C003779D2 /* CoreDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DD27281628ACC15F003779D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +296,7 @@
 				DD0B777C28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld in Sources */,
 				DD27280628A9456C003779D2 /* CoreDataService.swift in Sources */,
 				DD0B777428A907BD00CFE2B2 /* SceneDelegate.swift in Sources */,
+				DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
