@@ -9,9 +9,9 @@ import UIKit
 
 class UsersViewController: UIViewController {
 
-    var models = ["test1", "test2", "test3"]
-
     // MARK: - Properties
+
+    var presenter: UsersPresenterProtocol!
 
     private var usersView: UsersView? {
         guard isViewLoaded else { return nil }
@@ -29,6 +29,11 @@ class UsersViewController: UIViewController {
         setupView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        presenter?.getAllUsers()
+    }
+
     // MARK: - Private functions
 
     private func setupView() {
@@ -39,6 +44,30 @@ class UsersViewController: UIViewController {
         usersView?.tableView.dataSource = self
         usersView?.addUserTextField.delegate = self
         usersView?.tableView.keyboardDismissMode = .onDrag
+        usersView?.addUserButton.addTarget(self,
+                                           action: #selector(addUserButtonTapped),
+                                           for: .touchUpInside)
+    }
+}
+
+// MARK: - UsersViewProtocol
+
+extension UsersViewController: UsersViewProtocol {
+    @objc func addUserButtonTapped() {
+        guard let userName = usersView?.addUserTextField.text,
+              !userName.trimmingCharacters(in: .whitespaces).isEmpty else {
+            showAlert(title: "Error", message: "Enter name")
+            return
+        }
+        presenter?.saveUser(userName)
+        usersView?.addUserTextField.text = ""
+        usersView?.addUserTextField.resignFirstResponder()
+    }
+
+    func fetchTableView() {
+        DispatchQueue.main.async {
+            self.usersView?.tableView.reloadData()
+        }
     }
 }
 
@@ -46,14 +75,13 @@ class UsersViewController: UIViewController {
 
 extension UsersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        models.count
+        presenter?.users?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = models[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = presenter?.users?[indexPath.row].name
         cell.accessoryType = .disclosureIndicator
-        cell.textLabel?.text = model
         return cell
     }
 }
@@ -61,12 +89,22 @@ extension UsersViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension UsersViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let action = UIContextualAction(style: .destructive, title: "Delete") { action, view, completionHandler in
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
 
+        let action = UIContextualAction(style: .destructive, title: "Delete") { action, view, completionHandler in
+            guard let user = self.presenter?.users?[indexPath.row] else { return }
+            self.presenter?.deleteUser(user)
         }
 
         return UISwipeActionsConfiguration(actions: [action])
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = presenter.users?[indexPath.row]
+        presenter.userDidSelect(user: user)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -74,6 +112,7 @@ extension UsersViewController: UITableViewDelegate {
 
 extension UsersViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        addUserButtonTapped()
         textField.resignFirstResponder()
         return true
     }
