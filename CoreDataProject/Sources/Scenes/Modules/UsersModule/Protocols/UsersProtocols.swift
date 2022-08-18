@@ -17,7 +17,6 @@ protocol UsersViewProtocol: AnyObject {
 // MARK: - UsersPresenterProtocol
 
 protocol UsersPresenterProtocol: AnyObject {
-    var users: [User]? { get set  }
 
     init(view: UsersViewProtocol, coreDataService: CoreDataProtocol, router: UsersRouterProtocol)
     func saveUser(_ name: String)

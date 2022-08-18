@@ -14,7 +14,6 @@ class UsersPresenter: UsersPresenterProtocol {
     weak var view: UsersViewProtocol?
     private let coreDataService: CoreDataProtocol
     private let router: UsersRouterProtocol?
-    var users: [User]?
 
     // MARK: - Initialize
     
@@ -27,18 +26,17 @@ class UsersPresenter: UsersPresenterProtocol {
     // MARK: - Functions
 
     func getAllUsers() {
-        users = coreDataService.getAllUsers()
         view?.fetchTableView()
     }
 
     func saveUser(_ name: String) {
         coreDataService.saveUser(name)
-        getAllUsers()
+        view?.fetchTableView()
     }
 
     func deleteUser(_ user: User) {
         coreDataService.deleteUser(user)
-        getAllUsers()
+        view?.fetchTableView()
     }
 
     func userDidSelect(user: User?) {
