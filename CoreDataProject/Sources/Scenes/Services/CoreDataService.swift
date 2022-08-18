@@ -10,6 +10,8 @@ import CoreData
 // MARK: - CoreDataProtocol
 
 protocol CoreDataProtocol: AnyObject {
+    var allUsers: [User]? { get }
+
     func saveUser(_ name: String)
     func getAllUsers() -> [User]?
     func deleteUser(_ user: User)
@@ -23,6 +25,10 @@ class CoreDataService: CoreDataProtocol {
     // MARK: - Propertries
 
     static let sharedManager = CoreDataService()
+
+    var allUsers: [User]? {
+        return getAllUsers()
+    }
 
     private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "CoreDataProject")
