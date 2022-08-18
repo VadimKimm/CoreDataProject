@@ -131,7 +131,11 @@
 			isa = PBXGroup;
 			children = (
 				DD2727EF28A912BB003779D2 /* App */,
+				DD27280128A942DC003779D2 /* Assembly */,
+				DD27281628ACC15F003779D2 /* Extensions */,
 				DD2727F028A912D6003779D2 /* Scenes */,
+				DD27280428A94556003779D2 /* Services */,
+				DD27281B28ACCB40003779D2 /* Router */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -148,11 +152,8 @@
 		DD2727F028A912D6003779D2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				DD27280128A942DC003779D2 /* Assembly */,
-				DD27282028AD42F1003779D2 /* Modules */,
-				DD27280428A94556003779D2 /* Services */,
-				DD27281B28ACCB40003779D2 /* Router */,
-				DD27281628ACC15F003779D2 /* Extensions */,
+				DD2727F128A912DD003779D2 /* UsersModule */,
+				DD27280A28AA91C5003779D2 /* DetailedUserModule */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -269,15 +270,6 @@
 				DD27281C28ACCB4F003779D2 /* Router.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		DD27282028AD42F1003779D2 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				DD2727F128A912DD003779D2 /* UsersModule */,
-				DD27280A28AA91C5003779D2 /* DetailedUserModule */,
-			);
-			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
