@@ -102,7 +102,6 @@ extension UsersView {
         static let addUserTextFieldLeftOffset = 15
         static let addUserTextFieldRightOffset = -addUserTextFieldLeftOffset
         static let addUserTextFieldHeight = 45
-        static let addUserButtonHeight = addUserTextFieldHeight
 
         static let addUserButtonTopOffset = 20
 
