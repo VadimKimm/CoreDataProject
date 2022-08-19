@@ -18,16 +18,14 @@ protocol StorageType: AnyObject {
     func updateUser(_ user: User, newName: String?, birthDate: String?, gender: String?, avatar: Data?)
 }
 
-// MARK: - CoreDataService
+// MARK: - Storage
 
 class Storage: StorageType {
 
     // MARK: - Propertries
 
-    static let sharedManager = Storage()
-
     var allUsers: [User]? {
-        return getAllUsers()
+        getAllUsers()
     }
 
     private lazy var persistentContainer: NSPersistentContainer = {
