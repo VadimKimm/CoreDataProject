@@ -7,9 +7,9 @@
 
 import CoreData
 
-// MARK: - CoreDataProtocol
+// MARK: - StorageType
 
-protocol CoreDataProtocol: AnyObject {
+protocol StorageType: AnyObject {
     var allUsers: [User]? { get }
 
     func saveUser(_ name: String)
@@ -20,11 +20,11 @@ protocol CoreDataProtocol: AnyObject {
 
 // MARK: - CoreDataService
 
-class CoreDataService: CoreDataProtocol {
+class Storage: StorageType {
 
     // MARK: - Propertries
 
-    static let sharedManager = CoreDataService()
+    static let sharedManager = Storage()
 
     var allUsers: [User]? {
         return getAllUsers()
@@ -104,7 +104,7 @@ class CoreDataService: CoreDataProtocol {
 
 // MARK: - Core Data Saving support
 
-extension CoreDataService {
+extension Storage {
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {

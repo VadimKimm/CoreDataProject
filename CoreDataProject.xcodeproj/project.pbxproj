@@ -24,11 +24,11 @@
 		DD27281128AA9290003779D2 /* DetailedUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281028AA9290003779D2 /* DetailedUserPresenter.swift */; };
 		DD27281328AA930D003779D2 /* DetailedUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281228AA930D003779D2 /* DetailedUserViewController.swift */; };
 		DD27281528AA9318003779D2 /* DetailedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281428AA9318003779D2 /* DetailedUserView.swift */; };
-		DD27281828ACC198003779D2 /* Date + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281728ACC198003779D2 /* Date + Ext.swift */; };
-		DD27281A28ACC246003779D2 /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281928ACC246003779D2 /* String + Ext.swift */; };
+		DD27281828ACC198003779D2 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281728ACC198003779D2 /* Date+Ext.swift */; };
+		DD27281A28ACC246003779D2 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281928ACC246003779D2 /* String+Ext.swift */; };
 		DD27281D28ACCB4F003779D2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281C28ACCB4F003779D2 /* Router.swift */; };
-		DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */; };
-		DD27282228AD685F003779D2 /* UIImage + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27282128AD685F003779D2 /* UIImage + Ext.swift */; };
+		DD27282228AD685F003779D2 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27282128AD685F003779D2 /* UIImage+Ext.swift */; };
+		DDCB982928AFE9A100ACBB8F /* UITexField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCB982828AFE9A100ACBB8F /* UITexField+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,11 +53,13 @@
 		DD27281028AA9290003779D2 /* DetailedUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserPresenter.swift; sourceTree = "<group>"; };
 		DD27281228AA930D003779D2 /* DetailedUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserViewController.swift; sourceTree = "<group>"; };
 		DD27281428AA9318003779D2 /* DetailedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedUserView.swift; sourceTree = "<group>"; };
-		DD27281728ACC198003779D2 /* Date + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext.swift"; sourceTree = "<group>"; };
-		DD27281928ACC246003779D2 /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
+		DD27281728ACC198003779D2 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		DD27281928ACC246003779D2 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		DD27281C28ACCB4F003779D2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
-		DD27282128AD685F003779D2 /* UIImage + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Ext.swift"; sourceTree = "<group>"; };
+		DD27281E28ACD489003779D2 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		DD27282128AD685F003779D2 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		DDCB982828AFE9A100ACBB8F /* UITexField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITexField+Ext.swift"; sourceTree = "<group>"; };
+		DDCB982A28AFE9D900ACBB8F /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,10 +258,12 @@
 		DD27281628ACC15F003779D2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DD27281728ACC198003779D2 /* Date + Ext.swift */,
-				DD27281928ACC246003779D2 /* String + Ext.swift */,
-				DD27281E28ACD489003779D2 /* UIViewController + Ext.swift */,
-				DD27282128AD685F003779D2 /* UIImage + Ext.swift */,
+				DD27281728ACC198003779D2 /* Date+Ext.swift */,
+				DD27281928ACC246003779D2 /* String+Ext.swift */,
+				DD27281E28ACD489003779D2 /* UIViewController+Ext.swift */,
+				DD27282128AD685F003779D2 /* UIImage+Ext.swift */,
+				DDCB982828AFE9A100ACBB8F /* UITexField+Ext.swift */,
+				DDCB982A28AFE9D900ACBB8F /* UIImageView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -386,12 +390,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD27281A28ACC246003779D2 /* String + Ext.swift in Sources */,
+				DD27281A28ACC246003779D2 /* String+Ext.swift in Sources */,
 				DD2727F428A91465003779D2 /* UsersView.swift in Sources */,
 				DD2727FD28A92992003779D2 /* UsersPresenter.swift in Sources */,
 				DD27280328A942F7003779D2 /* AssemblyModule.swift in Sources */,
 				DD27280F28AA921B003779D2 /* DetailedUserProtocol.swift in Sources */,
-				DD27281828ACC198003779D2 /* Date + Ext.swift in Sources */,
+				DD27281828ACC198003779D2 /* Date+Ext.swift in Sources */,
+				DDCB982B28AFE9D900ACBB8F /* UIImageView+Ext.swift in Sources */,
+				DDCB982928AFE9A100ACBB8F /* UITexField+Ext.swift in Sources */,
 				DD0B777628A907BD00CFE2B2 /* UsersViewController.swift in Sources */,
 				DD27281128AA9290003779D2 /* DetailedUserPresenter.swift in Sources */,
 				DD2727F928A928A4003779D2 /* User+CoreDataClass.swift in Sources */,
@@ -400,10 +406,10 @@
 				DD0B777C28A907BD00CFE2B2 /* CoreDataProject.xcdatamodeld in Sources */,
 				DD27280628A9456C003779D2 /* CoreDataService.swift in Sources */,
 				DD27281328AA930D003779D2 /* DetailedUserViewController.swift in Sources */,
-				DD27282228AD685F003779D2 /* UIImage + Ext.swift in Sources */,
+				DD27282228AD685F003779D2 /* UIImage+Ext.swift in Sources */,
 				DD0B777428A907BD00CFE2B2 /* SceneDelegate.swift in Sources */,
 				DD27280028A92A5F003779D2 /* UsersProtocols.swift in Sources */,
-				DD27281F28ACD489003779D2 /* UIViewController + Ext.swift in Sources */,
+				DD27281F28ACD489003779D2 /* UIViewController+Ext.swift in Sources */,
 				DD27281528AA9318003779D2 /* DetailedUserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
