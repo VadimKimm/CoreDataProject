@@ -7,6 +7,15 @@
 
 import UIKit
 
+// MARK: - UsersViewType
+
+protocol UsersViewType: AnyObject {
+    func updateTableView()
+    func addUserButtonTapped()
+}
+
+// MARK: - UsersViewController
+
 class UsersViewController: UIViewController {
 
     // MARK: - Properties

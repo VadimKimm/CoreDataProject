@@ -7,7 +7,21 @@
 
 import Foundation
 
-class UsersPresenter: UsersPresenterProtocol {
+// MARK: - UsersPresenterType
+
+protocol UsersPresenterType: AnyObject {
+    var users: [User]? { get }
+
+    init(view: UsersViewType, storage: StorageType, router: UsersRouterProtocol)
+    func saveUser(_ name: String)
+    func getAllUsers()
+    func deleteUser(_ user: User)
+    func userDidSelect(user: User?)
+}
+
+// MARK: - UsersPresenter
+
+class UsersPresenter: UsersPresenterType {
 
     // MARK: - Properties
 

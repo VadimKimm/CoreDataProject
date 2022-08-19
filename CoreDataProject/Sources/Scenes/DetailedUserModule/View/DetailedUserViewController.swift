@@ -7,6 +7,14 @@
 
 import UIKit
 
+// MARK: - DetailedUserViewType
+
+protocol DetailedUserViewType: AnyObject {
+    func setValuesForTextFields()
+}
+
+// MARK: - DetailedUserViewController
+
 class DetailedUserViewController: UIViewController, UINavigationControllerDelegate {
 
     // MARK: - Properties
