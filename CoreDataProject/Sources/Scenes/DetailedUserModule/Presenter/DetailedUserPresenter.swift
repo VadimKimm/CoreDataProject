@@ -24,18 +24,18 @@ class DetailedUserPresenter: DetailedUserPresenterType {
 
     // MARK: - Properties
 
-    weak var view: DetailedUserViewProtocol?
-    private let coreDataService: CoreDataProtocol
+    weak var view: DetailedUserViewType?
+    private let coreDataService: StorageType
     private let router: UsersRouterProtocol?
-    var userToEdit: User?
+    var user: User?
 
     // MARK: - Initialize
 
-    required init(view: DetailedUserViewProtocol, coreDataService: CoreDataProtocol, router: UsersRouterProtocol, user: User?) {
+    required init(view: DetailedUserViewType, storage: StorageType, router: UsersRouterProtocol, user: User?) {
         self.view = view
-        self.coreDataService = coreDataService
+        self.coreDataService = storage
         self.router = router
-        self.userToEdit = user
+        self.user = user
     }
 
     // MARK: - Functions
