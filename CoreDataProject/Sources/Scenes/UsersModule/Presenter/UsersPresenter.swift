@@ -25,32 +25,33 @@ class UsersPresenter: UsersPresenterType {
 
     // MARK: - Properties
 
-    weak var view: UsersViewProtocol?
-    private let coreDataService: CoreDataProtocol
+    weak var view: UsersViewType?
+    private let storage: StorageType
     private let router: UsersRouterProtocol?
+    var users: [User]?
 
     // MARK: - Initialize
     
-    required init(view: UsersViewProtocol, coreDataService: CoreDataProtocol, router: UsersRouterProtocol) {
+    required init(view: UsersViewType, storage: StorageType, router: UsersRouterProtocol) {
         self.view = view
-        self.coreDataService = coreDataService
+        self.storage = storage
         self.router = router
     }
 
     // MARK: - Functions
 
     func getAllUsers() {
-        view?.fetchTableView()
+        users = storage.allUsers
     }
 
     func saveUser(_ name: String) {
-        coreDataService.saveUser(name)
-        view?.fetchTableView()
+        storage.saveUser(name)
+        users = storage.allUsers
     }
 
     func deleteUser(_ user: User) {
-        coreDataService.deleteUser(user)
-        view?.fetchTableView()
+        storage.deleteUser(user)
+        users = storage.allUsers
     }
 
     func userDidSelect(user: User?) {
