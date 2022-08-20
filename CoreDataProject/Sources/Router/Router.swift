@@ -34,23 +34,24 @@ class Router: UsersRouterProtocol {
     }
 
     func initializeViewControllers() {
-        if let navigationController = navigationController {
-            guard let usersViewController = assemblyModule?.createUsersModule(router: self) else { return }
-            navigationController.viewControllers = [usersViewController]
-        }
+        guard let navigationController = navigationController,
+              let usersViewController = assemblyModule?.createUsersModule(router: self)
+        else { return }
+
+        navigationController.viewControllers = [usersViewController]
     }
 
     func showDetailedViewController(user: User?) {
-        if let navigationController = navigationController {
-            guard let detailedUserViewController =
-                    assemblyModule?.createDetailedUserModule(router: self, user: user) else { return }
-            navigationController.pushViewController(detailedUserViewController, animated: true)
-        }
+        guard let navigationController = navigationController,
+              let detailedUserViewController = assemblyModule?.createDetailedUserModule(router: self, user: user)
+        else { return }
+
+        navigationController.pushViewController(detailedUserViewController, animated: true)
     }
 
     func popToRoot() {
-        if let navigationController = navigationController {
-            navigationController.popToRootViewController(animated: true)
-        }
+        guard let navigationController = navigationController else { return }
+
+        navigationController.popToRootViewController(animated: true)
     }
 }
