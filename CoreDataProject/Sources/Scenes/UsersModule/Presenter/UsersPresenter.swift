@@ -42,16 +42,17 @@ class UsersPresenter: UsersPresenterType {
 
     func getAllUsers() {
         users = storage.allUsers
+        view?.updateTableView()
     }
 
     func saveUser(_ name: String) {
         storage.saveUser(name)
-        users = storage.allUsers
+        getAllUsers()
     }
 
     func deleteUser(_ user: User) {
         storage.deleteUser(user)
-        users = storage.allUsers
+        getAllUsers()
     }
 
     func userDidSelect(user: User?) {
