@@ -19,7 +19,7 @@ class DetailedUserViewController: UIViewController, UINavigationControllerDelega
 
     // MARK: - Properties
 
-    var presenter: DetailedUserPresenterType!
+    var presenter: DetailedUserPresenterType?
     private var selectedAvatar: Data? = nil
     private let genders = ["Choose gender", "Male", "Female"]
     private var isEditingMode = false
@@ -47,7 +47,7 @@ class DetailedUserViewController: UIViewController, UINavigationControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        presenter.getUser()
+        presenter?.getUser()
     }
 
     // MARK: - Private functions
@@ -67,16 +67,16 @@ class DetailedUserViewController: UIViewController, UINavigationControllerDelega
 
     private func setupNavigationBar() {
         backOptionButton = UIBarButtonItem(title: "",
-                                               style: .plain,
-                                               target: self,
-                                               action: #selector(backButtonTapped))
+                                           style: .plain,
+                                           target: self,
+                                           action: #selector(backButtonTapped))
         backOptionButton.setBackgroundImage(UIImage(systemName: "arrow.left"), for: .normal, barMetrics: .default)
         backOptionButton.tintColor = .label
 
         editOptionButton = UIBarButtonItem(title: "Edit",
-                                               style: .plain,
-                                               target: self,
-                                               action: #selector(editButtonTapped))
+                                           style: .plain,
+                                           target: self,
+                                           action: #selector(editButtonTapped))
         editOptionButton.tintColor = .label
 
         navigationItem.leftBarButtonItem = backOptionButton
@@ -122,7 +122,7 @@ class DetailedUserViewController: UIViewController, UINavigationControllerDelega
     }
 
     @objc private func backButtonTapped() {
-        presenter.backButtonTapped()
+        presenter?.backButtonTapped()
     }
 
     @objc private func editButtonTapped() {
@@ -153,11 +153,11 @@ class DetailedUserViewController: UIViewController, UINavigationControllerDelega
                 return
             }
 
-            presenter.updateUser(presenter.user!,
-                                 newName: userNameTextField?.text,
-                                 birthDate: birthDateTextField?.text,
-                                 gender: genderTextField?.text,
-                                 avatar: selectedAvatar)
+            presenter?.updateUser(presenter?.user! ?? User(),
+                                  newName: userNameTextField?.text,
+                                  birthDate: birthDateTextField?.text,
+                                  gender: genderTextField?.text,
+                                  avatar: selectedAvatar)
         }
     }
 
@@ -167,12 +167,12 @@ class DetailedUserViewController: UIViewController, UINavigationControllerDelega
 
 extension DetailedUserViewController: DetailedUserViewType {
     func setValuesForTextFields() {
-        detailedUserView?.userNameTextField.text = presenter.user?.name
-        detailedUserView?.birthDateTextField.text = presenter.user?.birthDate?.convertToString()
-        detailedUserView?.genderTextField.text = presenter.user?.gender
+        detailedUserView?.userNameTextField.text = presenter?.user?.name
+        detailedUserView?.birthDateTextField.text = presenter?.user?.birthDate?.convertToString()
+        detailedUserView?.genderTextField.text = presenter?.user?.gender
 
         DispatchQueue.main.async {
-            if let avatar = self.presenter.user?.avatar {
+            if let avatar = self.presenter?.user?.avatar {
                 self.detailedUserView?.setAvatar(avatar)
             }
         }

@@ -20,7 +20,7 @@ class UsersViewController: UIViewController {
 
     // MARK: - Properties
 
-    var presenter: UsersPresenterType!
+    var presenter: UsersPresenterType?
 
     private var usersView: UsersView? {
         guard isViewLoaded else { return nil }
@@ -85,12 +85,12 @@ extension UsersViewController: UsersViewType {
 
 extension UsersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter.users?.count ?? 0
+        presenter?.users?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = presenter.users?[indexPath.row].name
+        cell.textLabel?.text = presenter?.users?[indexPath.row].name
         cell.accessoryType = .disclosureIndicator
         return cell
     }
@@ -103,7 +103,7 @@ extension UsersViewController: UITableViewDelegate {
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
         let action = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _,_,_  in
-            guard let user = self?.presenter.users?[indexPath.row] else { return }
+            guard let user = self?.presenter?.users?[indexPath.row] else { return }
             self?.presenter?.deleteUser(user)
         }
 
@@ -112,8 +112,8 @@ extension UsersViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let user = presenter.users?[indexPath.row]
-        presenter.userDidSelect(user: user)
+        let user = presenter?.users?[indexPath.row]
+        presenter?.userDidSelect(user: user)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
