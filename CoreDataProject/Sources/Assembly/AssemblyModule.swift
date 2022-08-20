@@ -7,21 +7,29 @@
 
 import UIKit
 
+// MARK: - ModuleAssemblyType
 
-// MARK: - ModuleAssemblyProtocol
+protocol ModuleAssemblyType {
+    var storage: StorageType { get }
 
-protocol ModuleAssemblyProtocol {
     func createUsersModule(router: UsersRouterProtocol) -> UIViewController
     func createDetailedUserModule(router: UsersRouterProtocol, user: User?) -> UIViewController
 }
 
 //MARK: - AssemblyModule
 
-class AssemblyModule: ModuleAssemblyProtocol {
+class AssemblyModule: ModuleAssemblyType {
+
+    // MARK: - Properties
+
+    var storage: StorageType = Storage()
+
+    // MARK: - Functions
+
     func createUsersModule(router: UsersRouterProtocol) -> UIViewController {
         let view = UsersViewController()
         let presenter = UsersPresenter(view: view,
-                                       coreDataService: CoreDataService.sharedManager,
+                                       storage: storage,
                                        router: router)
         view.presenter = presenter
         return view
@@ -30,7 +38,7 @@ class AssemblyModule: ModuleAssemblyProtocol {
     func createDetailedUserModule(router: UsersRouterProtocol, user: User?) -> UIViewController {
         let view = DetailedUserViewController()
         let presenter = DetailedUserPresenter(view: view,
-                                              coreDataService: CoreDataService.sharedManager,
+                                              storage: storage,
                                               router: router,
                                               user: user)
         view.presenter = presenter

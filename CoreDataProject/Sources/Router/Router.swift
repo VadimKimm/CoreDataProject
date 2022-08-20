@@ -11,7 +11,7 @@ import UIKit
 
 protocol TemplateRouterProtocol {
     var navigationController: UINavigationController? { get set }
-    var assemblyModule: ModuleAssemblyProtocol? { get set }
+    var assemblyModule: ModuleAssemblyType? { get set }
 }
 
 // MARK: - UsersRouterProtocol
@@ -26,9 +26,9 @@ protocol UsersRouterProtocol: TemplateRouterProtocol {
 
 class Router: UsersRouterProtocol {
     var navigationController: UINavigationController?
-    var assemblyModule: ModuleAssemblyProtocol?
+    var assemblyModule: ModuleAssemblyType?
 
-    init(navigationController: UINavigationController, assemblyModule: ModuleAssemblyProtocol) {
+    init(navigationController: UINavigationController, assemblyModule: ModuleAssemblyType) {
         self.navigationController = navigationController
         self.assemblyModule = assemblyModule
     }

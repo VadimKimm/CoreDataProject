@@ -7,11 +7,19 @@
 
 import UIKit
 
+// MARK: - DetailedUserViewType
+
+protocol DetailedUserViewType: AnyObject {
+    func setValuesForTextFields()
+}
+
+// MARK: - DetailedUserViewController
+
 class DetailedUserViewController: UIViewController, UINavigationControllerDelegate {
 
     // MARK: - Properties
 
-    var presenter: DetailedUserPresenterProtocol!
+    var presenter: DetailedUserPresenterType!
     private var selectedAvatar: Data? = nil
     private let genders = ["Choose gender", "Male", "Female"]
     private var isEditingMode = false
@@ -145,7 +153,7 @@ class DetailedUserViewController: UIViewController, UINavigationControllerDelega
                 return
             }
 
-            presenter.updateUser(presenter.userToEdit!,
+            presenter.updateUser(presenter.user!,
                                  newName: userNameTextField?.text,
                                  birthDate: birthDateTextField?.text,
                                  gender: genderTextField?.text,
@@ -157,14 +165,14 @@ class DetailedUserViewController: UIViewController, UINavigationControllerDelega
 
 // MARK: - DetailedUserViewProtocol
 
-extension DetailedUserViewController: DetailedUserViewProtocol {
+extension DetailedUserViewController: DetailedUserViewType {
     func setValuesForTextFields() {
-        detailedUserView?.userNameTextField.text = presenter.userToEdit?.name
-        detailedUserView?.birthDateTextField.text = presenter.userToEdit?.birthDate?.convertToString()
-        detailedUserView?.genderTextField.text = presenter.userToEdit?.gender
+        detailedUserView?.userNameTextField.text = presenter.user?.name
+        detailedUserView?.birthDateTextField.text = presenter.user?.birthDate?.convertToString()
+        detailedUserView?.genderTextField.text = presenter.user?.gender
 
         DispatchQueue.main.async {
-            if let avatar = self.presenter.userToEdit?.avatar {
+            if let avatar = self.presenter.user?.avatar {
                 self.detailedUserView?.setAvatar(avatar)
             }
         }
@@ -209,8 +217,7 @@ extension DetailedUserViewController: UIPickerViewDelegate {
 
 extension DetailedUserViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
-    {
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
         guard let image = info[.originalImage] as? UIImage else {
             showAlert(title: "Error", message: "\(info)")

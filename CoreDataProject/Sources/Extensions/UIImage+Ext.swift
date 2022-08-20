@@ -1,5 +1,5 @@
 //
-//  UIImage + Ext.swift
+//  UIImage+Ext.swift
 //  CoreDataProject
 //
 //  Created by Vadim Kim on 17.08.2022.
